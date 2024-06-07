@@ -1,0 +1,13 @@
+current directory: /Users/tagami/todo-app-hiro/vendor/bundle/ruby/2.7.0/gems/json-2.7.2/ext/json
+/Users/tagami/.rbenv/versions/2.7.7/bin/ruby -I /Users/tagami/.rbenv/versions/2.7.7/lib/ruby/site_ruby/2.7.0 extconf.rb
+creating Makefile
+
+current directory: /Users/tagami/todo-app-hiro/vendor/bundle/ruby/2.7.0/gems/json-2.7.2/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240607-60408-14xhsln sitelibdir\=./.gem.20240607-60408-14xhsln clean
+
+current directory: /Users/tagami/todo-app-hiro/vendor/bundle/ruby/2.7.0/gems/json-2.7.2/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240607-60408-14xhsln sitelibdir\=./.gem.20240607-60408-14xhsln
+make: Nothing to be done for `all'.
+
+current directory: /Users/tagami/todo-app-hiro/vendor/bundle/ruby/2.7.0/gems/json-2.7.2/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240607-60408-14xhsln sitelibdir\=./.gem.20240607-60408-14xhsln install

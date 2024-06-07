@@ -1,0 +1,18 @@
+current directory: /Users/tagami/todo-app-hiro/vendor/bundle/ruby/2.7.0/gems/hamlit-3.0.3/ext/hamlit
+/Users/tagami/.rbenv/versions/2.7.7/bin/ruby -I /Users/tagami/.rbenv/versions/2.7.7/lib/ruby/site_ruby/2.7.0 extconf.rb
+creating Makefile
+
+current directory: /Users/tagami/todo-app-hiro/vendor/bundle/ruby/2.7.0/gems/hamlit-3.0.3/ext/hamlit
+make DESTDIR\= sitearchdir\=./.gem.20240607-60408-1dc2fjo sitelibdir\=./.gem.20240607-60408-1dc2fjo clean
+
+current directory: /Users/tagami/todo-app-hiro/vendor/bundle/ruby/2.7.0/gems/hamlit-3.0.3/ext/hamlit
+make DESTDIR\= sitearchdir\=./.gem.20240607-60408-1dc2fjo sitelibdir\=./.gem.20240607-60408-1dc2fjo
+compiling hamlit.c
+compiling hescape.c
+linking shared-object hamlit/hamlit.bundle
+ld: warning: -multiply_defined is obsolete
+ld: warning: ignoring duplicate libraries: '-lruby.2.7'
+
+current directory: /Users/tagami/todo-app-hiro/vendor/bundle/ruby/2.7.0/gems/hamlit-3.0.3/ext/hamlit
+make DESTDIR\= sitearchdir\=./.gem.20240607-60408-1dc2fjo sitelibdir\=./.gem.20240607-60408-1dc2fjo install
+/usr/bin/install -c -m 0755 hamlit.bundle ./.gem.20240607-60408-1dc2fjo/hamlit

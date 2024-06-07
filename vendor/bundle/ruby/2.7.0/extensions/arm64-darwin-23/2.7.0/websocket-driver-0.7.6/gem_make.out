@@ -1,0 +1,17 @@
+current directory: /Users/tagami/todo-app-hiro/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+/Users/tagami/.rbenv/versions/2.7.7/bin/ruby -I /Users/tagami/.rbenv/versions/2.7.7/lib/ruby/site_ruby/2.7.0 extconf.rb
+creating Makefile
+
+current directory: /Users/tagami/todo-app-hiro/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20240607-60408-vtx034 sitelibdir\=./.gem.20240607-60408-vtx034 clean
+
+current directory: /Users/tagami/todo-app-hiro/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20240607-60408-vtx034 sitelibdir\=./.gem.20240607-60408-vtx034
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+ld: warning: -multiply_defined is obsolete
+ld: warning: ignoring duplicate libraries: '-lruby.2.7'
+
+current directory: /Users/tagami/todo-app-hiro/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.6/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20240607-60408-vtx034 sitelibdir\=./.gem.20240607-60408-vtx034 install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20240607-60408-vtx034
