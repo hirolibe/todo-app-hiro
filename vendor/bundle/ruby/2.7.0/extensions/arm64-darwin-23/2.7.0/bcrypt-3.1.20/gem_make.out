@@ -1,0 +1,25 @@
+current directory: /Users/tagami/todo-app-hiro/vendor/bundle/ruby/2.7.0/gems/bcrypt-3.1.20/ext/mri
+/Users/tagami/.rbenv/versions/2.7.7/bin/ruby -I /Users/tagami/.rbenv/versions/2.7.7/lib/ruby/site_ruby/2.7.0 extconf.rb
+creating Makefile
+
+current directory: /Users/tagami/todo-app-hiro/vendor/bundle/ruby/2.7.0/gems/bcrypt-3.1.20/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20240607-60408-1xfclak sitelibdir\=./.gem.20240607-60408-1xfclak clean
+
+current directory: /Users/tagami/todo-app-hiro/vendor/bundle/ruby/2.7.0/gems/bcrypt-3.1.20/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20240607-60408-1xfclak sitelibdir\=./.gem.20240607-60408-1xfclak
+compiling bcrypt_ext.c
+compiling crypt_blowfish.c
+clang  -D__SKIP_GNU -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -c -o x86.o x86.S
+compiling crypt_gensalt.c
+compiling wrapper.c
+wrapper.c:182:60: warning: declaration of 'struct crypt_data' will not be visible outside of this function [-Wvisibility]
+char *crypt_r(const char *key, const char *setting, struct crypt_data *data)
+                                                           ^
+1 warning generated.
+linking shared-object bcrypt_ext.bundle
+ld: warning: -multiply_defined is obsolete
+ld: warning: ignoring duplicate libraries: '-lruby.2.7'
+
+current directory: /Users/tagami/todo-app-hiro/vendor/bundle/ruby/2.7.0/gems/bcrypt-3.1.20/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20240607-60408-1xfclak sitelibdir\=./.gem.20240607-60408-1xfclak install
+/usr/bin/install -c -m 0755 bcrypt_ext.bundle ./.gem.20240607-60408-1xfclak
