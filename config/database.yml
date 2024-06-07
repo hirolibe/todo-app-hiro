@@ -19,6 +19,8 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
+  timeout: 5000
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
@@ -83,3 +85,4 @@ production:
   database: todo_app_hiro_production
   username: todo_app_hiro
   password: <%= ENV['TODO_APP_HIRO_DATABASE_PASSWORD'] %>
+  host: <%= ENV['TODO_APP_HIRO_DATABASE_HOST'] %>
