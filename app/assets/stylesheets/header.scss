@@ -7,21 +7,17 @@ $back-icon-size: 16px;
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: $primary-color;
   padding: $header-padding-y 16px;
   font-weight: bold;
-
-  a {
-    color: white;
-  }
+  border-bottom: 1px solid black;
 
   &_loginBtn {
-    background-color: $base-bg-color;
+    background-color: $primary-color;
     height: $avatar-size;
     border-radius: 8px;
     font-size: 12px;
     padding: 12px 16px;
-    color: $primary-color;
+    color: white;
   }
 
   &_logos {
@@ -37,9 +33,12 @@ $back-icon-size: 16px;
   }
 
   &_pageTitle {
-    color: white;
     line-height: $avatar-size;
-    font-size: $font-lg;
+    font-size: 20px;
+
+    a {
+      color: $text-base-color;
+    }
   }
 
   &_avatar {

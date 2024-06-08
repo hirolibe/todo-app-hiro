@@ -2,6 +2,7 @@
 @import 'form';
 @import 'header';
 @import 'button';
+@import 'common';
 
 
 html {
@@ -11,7 +12,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  height: 100%;
+  font-family: $text-base-font;
 }
 
 *,
@@ -22,18 +23,23 @@ html {
 }
 
 body {
-  height: 100%;
-  background-color: $base-bg-color;
   font-size: 1em;
   color: $text-base-color;
 }
 
 a {
   text-decoration: none;
-  color: $text-base-color;
 }
 
 .container {
   padding: 16px 16px;
   width: 100%;
+  h2 {
+    margin: 20px 0 20px 10px;
+  }
+}
+
+form {
+  height: 100%;
+  position: relative;
 }
