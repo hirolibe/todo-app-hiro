@@ -7,5 +7,26 @@
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %link{:href => "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
+
   %body
+    %header.header
+      .header_logos
+        %p.header_pageTitle
+          = link_to 'Boards'#, root_path
+      - if user_signed_in?
+        .dropdown
+          %div
+            = image_tag 'アイコン.jpg', class: 'header_avatar dropbtn'
+          .dropdown-content
+            = link_to 'Profile'#, profile_path
+            = link_to 'Likes'#, favorites_path
+            = link_to 'Log out'#, destroy_user_session_path, data: { method: 'delete' }
+      - else
+        = link_to 'Log in', new_user_session_path, class: 'header_loginBtn'
+    - if flash.present?
+      .flash
+        - flash.each do |key, value|
+          %div{:class => key}= value
     = yield
