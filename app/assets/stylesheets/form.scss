@@ -25,3 +25,19 @@ textarea {
   border-radius:10px;
   background-color: $base-bg-color;
 }
+
+#error_explanation {
+  color: red;
+  h2 {
+    font-size: 1em;
+  }
+}
+
+.alert {
+  padding: 16px 0 0 16px;
+  color: red;
+}
+
+.notice {
+  padding: 16px 0 0 16px;
+}
