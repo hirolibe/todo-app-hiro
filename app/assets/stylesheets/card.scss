@@ -1,0 +1,62 @@
+@import './variables';
+
+$avatar-size: 32px;
+
+.card {
+  background-color: $base-bg-color;
+  margin: 16px 0;
+  padding: 16px;
+  cursor: pointer;
+  border-radius: $text-border-radius;
+  color: black;
+
+  &_name {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  &_description {
+    margin-bottom: 10px;
+  }
+
+  &_info {
+    display: flex;
+    justify-content: space-between;
+
+    &_image {
+      padding-top: 12px;
+      cursor: pointer;
+      display: flex;
+      font-size: 10px;
+
+      img {
+        width: $avatar-size;
+        height: $avatar-size;
+        border-radius: 100%;
+        margin-right: 8px;
+      }
+    }
+
+    &_comment {
+      padding: 16px 16px;
+      display: flex;
+
+      span {
+        font-size: 12px;
+        line-height: 20px;
+        margin-right: 3px;
+        color: gray;
+      }
+    }
+  }
+}
+
+.new-board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  color: black;
+  border: 5px dotted #F4F4F4;
+  border-radius: $text-border-radius;
+}
