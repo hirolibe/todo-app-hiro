@@ -5,8 +5,8 @@
     .dropdown
       = image_tag 'Combined Shape.png', class: 'dropbtn'
       .dropdown-content.mini
-        = link_to 'Edit'#, edit_board_path(@board)
-        = link_to 'Delete'#, board_path(@board), data: { method: 'delete', confirm: '本当に削除してもいいですか？' }
+        = link_to 'Edit', edit_board_path(@board)
+        = link_to 'Delete', board_path(@board), data: { method: 'delete', confirm: '本当に削除してもいいですか？' }
   .board_description
     = @board.description
   .board_detail
