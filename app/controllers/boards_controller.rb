@@ -1,4 +1,4 @@
-class BoardsController < ApplicationController
+class BoardsController < ApplicationController aaa
   before_action :set_board, only: [:show]
   before_action :authenticate_user!, only: [:new, :create]#, :edit, :update, :destroy]
 
