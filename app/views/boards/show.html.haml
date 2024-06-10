@@ -1,0 +1,30 @@
+.board
+  %h2.board_name= @board.name
+  -# - if user_signed_in? && current_user.has_written?(@board)
+  .board_actions
+    .dropdown
+      = image_tag 'Combined Shape.png', class: 'dropbtn'
+      .dropdown-content.mini
+        = link_to 'Edit'#, edit_board_path(@board)
+        = link_to 'Delete'#, board_path(@board), data: { method: 'delete', confirm: '本当に削除してもいいですか？' }
+  .board_description
+    = @board.description
+  .board_detail
+    -# = image_tag @board.user.avatar_image
+    = image_tag 'アイコン.jpg'
+    %div
+      -# %p= @board.author_name
+      %p hiro
+      -# %p= @board.display_created_at
+      %p 2024/6/10
+
+-# .board
+-#   %h2 コメント一覧
+-#   - @comments.each do |comment|
+-#     .board_comment
+-#       %p= comment.content
+
+-# .container
+-#   =link_to new_board_comment_path(@board) do
+-#     .btn-secondary
+-#       + Add new comment

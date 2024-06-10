@@ -1,0 +1,25 @@
+.container
+  - @boards.each do |board|
+    = link_to board_path(board) do
+      .card
+        .card_content
+          .card_name
+            = board.name
+          .card_description
+            = board.description
+          .card_info
+            .card_info_image
+              = image_tag "アイコン.jpg"
+              -# = image_tag board.user.avatar_image
+              %div
+                -# %p= board.author_name
+                %p hiro
+                -# %p= board.display_created_at
+                %p 2024/6/10
+            .card_info_comment
+              -# %span= board.like_count
+              %span 24
+              = image_tag "message-square-outline.png"
+  = link_to new_board_path do
+    .new-board
+      %span + Add new board

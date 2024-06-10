@@ -6,7 +6,7 @@ input {
     margin: 8px 0px;
     padding: 16px 24px;
     border: none;
-    border-radius:10px;
+    border-radius:$text-border-radius;
     background-color: $base-bg-color;
   }
 }
@@ -22,7 +22,7 @@ textarea {
   min-height: 440px;
   resize: vertical;
   border: none;
-  border-radius:10px;
+  border-radius:$text-border-radius;
   background-color: $base-bg-color;
 }
 
