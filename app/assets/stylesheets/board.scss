@@ -1,0 +1,45 @@
+@import './variables';
+
+$avatar-size: 32px;
+$container-padding: 16px;
+
+.board {
+  background-color: white;
+  margin: 16px 16px;
+  padding: $container-padding $container-padding;
+  position: relative;
+
+  &_name {
+    margin-bottom: 20px;
+  }
+
+  &_actions {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  &_description {
+    padding: 20px;
+    background-color: $base-bg-color;
+    border-radius: $text-border-radius;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  &_detail {
+    padding-top: 10px;
+    display: flex;
+    font-size: 12px;
+    position: relative;
+
+    img {
+      cursor: pointer;
+      width: $avatar-size;
+      height: $avatar-size;
+      border-radius: 100%;
+      margin-right: 16px;
+    }
+  }
+
+}
