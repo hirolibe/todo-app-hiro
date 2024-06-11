@@ -5,12 +5,12 @@
       %li= message
   = form_with(model: @board, local: true) do |f|
     %div
-      = f.label :name, 'Name'
+      = f.label :title, 'Agenda'
     %div
-      = f.text_field :name, class: 'text'
+      = f.text_field :title, class: 'text'
     %br/
     %div
-      = f.label :description, 'Description'
+      = f.label :content, 'Description'
     %div
-      = f.text_area :description
+      = f.text_area :content, class: 'text'
     = f.submit 'Submit', class: 'btn-primary'

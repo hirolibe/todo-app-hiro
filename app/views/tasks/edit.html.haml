@@ -1,0 +1,21 @@
+.container
+  %h2 Edit Task
+  %ul
+    - @task.errors.full_messages.each do |message|
+      %li= message
+  = form_with(model: @task, url: board_task_path, local: true) do |f|
+    %div
+      = f.label :title, 'Task'
+    %div
+      = f.text_field :title, class: 'text'
+    %br/
+    %div
+      = f.label :content, 'Detail'
+    %div
+      = f.text_area :content, class: 'text'
+    %br/
+    %div
+      = f.label :deadline, 'Deadline'
+    %div
+      = f.date_field :deadline, class: 'text'
+    = f.submit 'Submit', class: 'btn-primary'

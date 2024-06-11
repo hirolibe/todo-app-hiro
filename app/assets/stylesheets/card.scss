@@ -5,47 +5,54 @@ $avatar-size: 32px;
 .card {
   background-color: $base-bg-color;
   margin: 16px 0;
-  padding: 16px;
+  padding: 16px 24px;
   cursor: pointer;
   border-radius: $text-border-radius;
   color: black;
 
-  &_name {
-    font-size: 24px;
-    margin-bottom: 8px;
-  }
-
-  &_description {
-    margin-bottom: 10px;
-  }
-
-  &_info {
-    display: flex;
-    justify-content: space-between;
-
-    &_image {
-      padding-top: 12px;
-      cursor: pointer;
-      display: flex;
-      font-size: 10px;
-
-      img {
-        width: $avatar-size;
-        height: $avatar-size;
-        border-radius: 100%;
-        margin-right: 8px;
-      }
+  &_content {
+    &_title {
+      font-size: 24px;
+      margin-bottom: 10px;
     }
 
-    &_comment {
-      padding: 16px 16px;
-      display: flex;
+    &_detail {
+      margin-bottom: 10px;
+    }
 
-      span {
-        font-size: 12px;
-        line-height: 20px;
-        margin-right: 3px;
-        color: gray;
+    &_info {
+      display: flex;
+      justify-content: space-between;
+
+      &_image {
+        padding-top: 12px;
+        cursor: pointer;
+        display: flex;
+        font-size: 10px;
+
+        img {
+          width: $avatar-size;
+          height: $avatar-size;
+          border-radius: 100%;
+          margin-right: 8px;
+        }
+      }
+
+      &_comment {
+        padding: 5px 5px;
+        display: flex;
+        align-items: flex-end;
+
+        img {
+          height: 20px;
+        }
+
+        span {
+          font-size: 12px;
+          line-height: 20px;
+          margin-right: 3px;
+          color: gray;
+        }
       }
     }
   }
