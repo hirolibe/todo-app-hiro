@@ -26,28 +26,28 @@ class TasksController < ApplicationController
     end
   end
 
-  # def edit
-  # end
+  def edit
+  end
 
-  # def update
-  #   if @task.update(task_params)
-  #     redirect_to task_path(@task), notice: 'ボードを更新しました'
-  #   else
-  #     flash.now[:error] = 'ボードの更新に失敗しました'
-  #     render :edit
-  #   end
-  # end
+  def update
+    if @task.update(task_params)
+      redirect_to board_task_path(@task), notice: 'ボードを更新しました'
+    else
+      flash.now[:error] = 'ボードの更新に失敗しました'
+      render :edit
+    end
+  end
 
-  # def destroy
-  #   task = current_user.tasks.find(params[:id])
-  #   task.destroy!
-  #   redirect_to root_path, notice: '削除に成功しました'
-  # end
+  def destroy
+    task = current_user.tasks.find(params[:id])
+    task.destroy!
+    redirect_to board_path(task.board), notice: '削除に成功しました'
+  end
 
   private
 
   def task_params
-    params.require(:task).permit(:title, :content, :user_id)
+    params.require(:task).permit(:title, :content, :deadline, :user_id)
   end
 
   def set_task
