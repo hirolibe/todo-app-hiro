@@ -1,5 +1,5 @@
 .board
-  %h2.board_title= @board.title
+  %h1.board_title= @board.title
   -# - if user_signed_in? && current_user.has_written?(@board)
   .board_actions
     .dropdown
@@ -21,8 +21,13 @@
 .board
   %h2 Tasks
   - @tasks.each do |task|
-    .board_task
-      %p= task.content
+    =link_to board_task_path(task.board, task) do
+      .board_info
+        -# = image_tag @board.user.avatar_image
+        = image_tag 'アイコン.jpg'
+        %div
+          %p hiro
+          %p= task.title
 
 .container
   =link_to new_board_task_path(@board) do

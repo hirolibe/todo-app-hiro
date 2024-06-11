@@ -13,5 +13,10 @@
       = f.label :content, 'Detail'
     %div
       = f.text_area :content, class: 'text'
+    %br/
+    %div
+      = f.label :date, 'Deadline'
+    %div
+      = f.date_field :date, class: 'text'
     = f.hidden_field :user_id, value: current_user.id
     = f.submit 'Submit', class: 'btn-primary'

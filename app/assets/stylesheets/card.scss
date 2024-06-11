@@ -5,7 +5,7 @@ $avatar-size: 32px;
 .card {
   background-color: $base-bg-color;
   margin: 16px 0;
-  padding: 16px;
+  padding: 16px 24px;
   cursor: pointer;
   border-radius: $text-border-radius;
   color: black;
@@ -39,8 +39,13 @@ $avatar-size: 32px;
       }
 
       &_comment {
-        padding: 16px 16px;
+        padding: 5px 5px;
         display: flex;
+        align-items: flex-end;
+
+        img {
+          height: 20px;
+        }
 
         span {
           font-size: 12px;
