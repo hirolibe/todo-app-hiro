@@ -3,7 +3,7 @@
 # Table name: tasks
 #
 #  id         :bigint           not null, primary key
-#  content    :text             not null
+#  content    :text
 #  deadline   :date
 #  title      :string           not null
 #  created_at :datetime         not null
@@ -17,4 +17,6 @@
 #  index_tasks_on_user_id   (user_id)
 #
 class Task < ApplicationRecord
+  belongs_to :user
+  belongs_to :board
 end

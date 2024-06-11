@@ -4,7 +4,7 @@ class CreateTasks < ActiveRecord::Migration[6.0]
       t.references :board, null: false
       t.references :user, null: false
       t.string :title, null: false
-      t.text :content, null: false
+      t.text :content
       t.date :deadline
       t.timestamps
     end

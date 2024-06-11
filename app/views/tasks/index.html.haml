@@ -1,24 +1,24 @@
 .container
-  - @boards.each do |board|
-    = link_to board_path(board) do
+  - @tasks.each do |task|
+    = link_to board_tasks_path(task) do
       .card
         .card_content
           .card_content_title
-            = board.title
+            = task.title
           .card_content_detail
-            = board.content
+            = task.content
           .card_content_info
             .card_content_info_image
               = image_tag "アイコン.jpg"
-              -# = image_tag board.user.avatar_image
+              -# = image_tag task.user.avatar_image
               %div
-                -# %p= board.author_name
+                -# %p= task.author_name
                 %p hiro
-                -# %p= board.display_created_at
+                -# %p= task.display_created_at
                 %p 2024/6/10
             .card_content_info_comment
               %span 24
               = image_tag "message-square-outline.png"
-  = link_to new_board_path do
-    .new-board
-      %span + Add new board
+  = link_to new_task_path do
+    .new-task
+      %span + Add new task

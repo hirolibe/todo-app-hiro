@@ -10,42 +10,44 @@ $avatar-size: 32px;
   border-radius: $text-border-radius;
   color: black;
 
-  &_name {
-    font-size: 24px;
-    margin-bottom: 8px;
-  }
-
-  &_description {
-    margin-bottom: 10px;
-  }
-
-  &_info {
-    display: flex;
-    justify-content: space-between;
-
-    &_image {
-      padding-top: 12px;
-      cursor: pointer;
-      display: flex;
-      font-size: 10px;
-
-      img {
-        width: $avatar-size;
-        height: $avatar-size;
-        border-radius: 100%;
-        margin-right: 8px;
-      }
+  &_content {
+    &_title {
+      font-size: 24px;
+      margin-bottom: 10px;
     }
 
-    &_comment {
-      padding: 16px 16px;
-      display: flex;
+    &_detail {
+      margin-bottom: 10px;
+    }
 
-      span {
-        font-size: 12px;
-        line-height: 20px;
-        margin-right: 3px;
-        color: gray;
+    &_info {
+      display: flex;
+      justify-content: space-between;
+
+      &_image {
+        padding-top: 12px;
+        cursor: pointer;
+        display: flex;
+        font-size: 10px;
+
+        img {
+          width: $avatar-size;
+          height: $avatar-size;
+          border-radius: 100%;
+          margin-right: 8px;
+        }
+      }
+
+      &_comment {
+        padding: 16px 16px;
+        display: flex;
+
+        span {
+          font-size: 12px;
+          line-height: 20px;
+          margin-right: 3px;
+          color: gray;
+        }
       }
     }
   }

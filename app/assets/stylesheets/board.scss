@@ -9,7 +9,7 @@ $container-padding: 16px;
   padding: $container-padding $container-padding;
   position: relative;
 
-  &_name {
+  &_title {
     margin-bottom: 20px;
   }
 
@@ -19,7 +19,7 @@ $container-padding: 16px;
     right: 16px;
   }
 
-  &_description {
+  &_content {
     padding: 20px;
     background-color: $base-bg-color;
     border-radius: $text-border-radius;
@@ -27,7 +27,7 @@ $container-padding: 16px;
     font-size: 14px;
   }
 
-  &_detail {
+  &_info {
     padding-top: 10px;
     display: flex;
     font-size: 12px;

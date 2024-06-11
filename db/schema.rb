@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 2024_06_10_203233) do
 
   create_table "boards", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.string "name", null: false
-    t.text "description", null: false
+    t.string "title", null: false
+    t.text "content", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_boards_on_user_id"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2024_06_10_203233) do
     t.bigint "board_id", null: false
     t.bigint "user_id", null: false
     t.string "title", null: false
-    t.text "content", null: false
+    t.text "content"
     t.date "deadline"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

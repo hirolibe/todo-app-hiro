@@ -1,16 +1,16 @@
 .container
-  %h2 Edit Board
+  %h2 Edit Task
   %ul
-    - @board.errors.full_messages.each do |message|
+    - @task.errors.full_messages.each do |message|
       %li= message
-  = form_with(model: @board, local: true) do |f|
+  = form_with(model: @task, local: true) do |f|
     %div
-      = f.label :title, 'Agenda'
+      = f.label :title, 'Task'
     %div
       = f.text_field :title, class: 'text'
     %br/
     %div
-      = f.label :content, 'Description'
+      = f.label :content, 'Detail'
     %div
       = f.text_area :content, class: 'text'
     = f.submit 'Submit', class: 'btn-primary'
