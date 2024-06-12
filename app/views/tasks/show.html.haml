@@ -2,13 +2,13 @@
   %h1.back-link= link_to @task.board.title, board_path(@task.board)
   .task
     %h2= @task.title
-    -# - if user_signed_in? && current_user.has_written?(@task)
-    .task_actions
-      .dropdown
-        = image_tag 'Combined Shape.png', class: 'dropbtn'
-        .dropdown-content.mini
-          = link_to 'Edit', edit_board_task_path(@task.board)
-          = link_to 'Delete', board_task_path(@task), data: { method: 'delete', confirm: '本当に削除してもいいですか？' }
+    - if user_signed_in? && current_user.has_written_task?(@task)
+      .task_actions
+        .dropdown
+          = image_tag 'Combined Shape.png', class: 'dropbtn'
+          .dropdown-content.mini
+            = link_to 'Edit', edit_board_task_path(@task.board)
+            = link_to 'Delete', board_task_path(@task), data: { method: 'delete', confirm: '本当に削除してもいいですか？' }
     .task_content
       = @task.content
     .task_deadline

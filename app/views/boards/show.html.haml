@@ -1,15 +1,13 @@
 .container
   .back-link
     %h1= link_to @board.title, root_path
-    .board_actions
-      .dropdown
-        = image_tag 'Combined Shape.png', class: 'dropbtn'
-        .dropdown-content.mini
-          = link_to 'Edit', edit_board_path(@board)
-          = link_to 'Delete', board_path(@board), data: { method: 'delete', confirm: '本当に削除してもいいですか？' }
-  .board
-    -# - if user_signed_in? && current_user.has_written?(@board)
-
+    - if user_signed_in? && current_user.has_written_board?(@board)
+      .board_actions
+        .dropdown
+          = image_tag 'Combined Shape.png', class: 'dropbtn'
+          .dropdown-content.mini
+            = link_to 'Edit', edit_board_path(@board)
+            = link_to 'Delete', board_path(@board), data: { method: 'delete', confirm: '本当に削除してもいいですか？' }
     .board_content
       = @board.content
     .board_info

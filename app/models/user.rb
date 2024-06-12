@@ -27,4 +27,12 @@ class User < ApplicationRecord
   def display_name
     self.email.split('@').first
   end
+
+  def has_written_board?(board)
+    boards.exists?(id: board.id)
+  end
+
+  def has_written_task?(task)
+    tasks.exists?(id: task.id)
+  end
 end
