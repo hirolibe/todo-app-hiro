@@ -8,16 +8,14 @@
           .card_content_detail
             = board.content
           .card_content_info
-            .card_content_info_image
+            .card_content_info_author
               = image_tag "アイコン.jpg"
               -# = image_tag board.user.avatar_image
-              %div
-                -# %p= board.author_name
-                %p hiro
-                -# %p= board.display_created_at
-                %p 2024/6/10
-            .card_content_info_comment
-              %span 24
+              .card_content_info_author_created
+                %p= board.author_name
+                %p= board.display_created_at
+            .card_content_info_task
+              %span= board.tasks.count
               = image_tag "message-square-outline.png"
   = link_to new_board_path do
     .new-board

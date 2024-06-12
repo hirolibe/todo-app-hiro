@@ -16,10 +16,9 @@
       -# = image_tag @board.user.avatar_image
       = image_tag 'アイコン.jpg'
       %div
-        -# %p= @board.author_title
-        %p hiro
-        -# %p= @board.display_created_at
-        %p 2024/6/10
+        %p= @board.author_name
+        %p= @board.display_created_at
+
 
   .board
     %h2 Tasks
@@ -29,7 +28,7 @@
           -# = image_tag @board.user.avatar_image
           = image_tag 'アイコン.jpg'
           %div
-            %p hiro
+            %p= task.author_name
             %p= task.title
     =link_to new_board_task_path(@board) do
       .new-board
