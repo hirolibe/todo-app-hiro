@@ -1,0 +1,10 @@
+.container
+  .board
+    %h2 My Tasks
+    - @mytasks.each do |mytask|
+      =link_to board_task_path(mytask.board, mytask) do
+        .board_info
+          %div
+            %h3= mytask.board.title
+            %p= mytask.title
+            %p= mytask.deadline
