@@ -9,4 +9,6 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :mytasks, only: [:index]
+
 end
