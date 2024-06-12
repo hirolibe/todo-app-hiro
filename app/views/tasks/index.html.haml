@@ -12,13 +12,8 @@
               = image_tag "アイコン.jpg"
               -# = image_tag task.user.avatar_image
               %div
-                -# %p= task.author_name
-                %p hiro
-                -# %p= task.display_created_at
-                %p 2024/6/10
-            .card_content_info_comment
-              %span 24
-              = image_tag "message-square-outline.png"
+                %p= task.author_name
+                %p= task.display_created_at
   = link_to new_task_path do
     .new-task
       %span + Add new task

@@ -24,7 +24,7 @@ $avatar-size: 32px;
       display: flex;
       justify-content: space-between;
 
-      &_image {
+      &_author {
         padding-top: 12px;
         cursor: pointer;
         display: flex;
@@ -36,9 +36,15 @@ $avatar-size: 32px;
           border-radius: 100%;
           margin-right: 8px;
         }
+
+        &_created {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
       }
 
-      &_comment {
+      &_task {
         padding: 5px 5px;
         display: flex;
         align-items: flex-end;
