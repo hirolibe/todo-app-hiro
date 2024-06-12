@@ -11,6 +11,9 @@
           = link_to 'Delete', board_task_path(@task), data: { method: 'delete', confirm: '本当に削除してもいいですか？' }
     .task_content
       = @task.content
+    .task_deadline
+      Deadline:
+      = @task.deadline
     .task_info
       -# = image_tag @task.user.avatar_image
       = image_tag 'アイコン.jpg'
@@ -20,13 +23,12 @@
         -# %p= @task.display_created_at
         %p 2024/6/10
 
-  -# .task
-  -#   %h2 コメント一覧
-  -#   - @comments.each do |comment|
-  -#     .task_comment
-  -#       %p= comment.content
-
-  -# .container
-  -#   =link_to new_task_comment_path(@task) do
-  -#     .btn-secondary
-  -#       + Add new comment
+  .task
+    %h2 Comments
+    - @comments.each do |comment|
+      .task_info
+        = image_tag 'アイコン.jpg'
+        %p= comment.content
+    =link_to new_board_task_comment_path(@task.board, @task) do
+      .new-board
+        %span + Add new comment
