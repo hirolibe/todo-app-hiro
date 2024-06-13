@@ -36,6 +36,7 @@ gem 'net-http'
 gem 'better_errors'
 gem 'binding_of_caller'
 gem 'aws-sdk-s3', require: false
+gem 'ffi', '~> 1.16.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
