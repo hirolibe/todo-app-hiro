@@ -19,6 +19,8 @@ module TodoAppHiro
     # the framework and any gems in your application.
     config.i18n.default_locale = :ja
 
-    Dotenv::Railtie.load
+    if Rails.env.development? || Rails.env.test?
+      Dotenv::Railtie.load
+    end
   end
 end
