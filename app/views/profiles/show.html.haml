@@ -1,0 +1,17 @@
+.container
+  .profile
+    .profile_top
+      %h2 Profile
+      = link_to 'Edit', edit_profile_path(@profile), class: 'header_loginBtn'
+    .profile_image
+      - if @profile&.avatar&.attached?
+        .profile_image_display
+          = image_tag @profile.avatar
+      - else
+        .profile_image_input
+          %span avatar image
+    .profile_nickname
+      - if @profile&.nickname
+        %p= @profile.nickname
+      - else
+        %p Nickname

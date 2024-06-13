@@ -7,14 +7,11 @@
             = board.title
           .card_content_detail
             = board.content
-          .card_content_info
-            .card_content_info_author
-              = image_tag "アイコン.jpg"
-              -# = image_tag board.user.avatar_image
-              .card_content_info_author_created
-                %p= board.author_name
-                %p= board.display_created_at
-            .card_content_info_task
+          .card_content_task
+            .card_content_task_author
+              - board.task_authors.each do |task_author|
+                = image_tag task_author.avatar_image
+            .card_content_task_count
               %span= board.tasks.count
               = image_tag "message-square-outline.png"
   = link_to new_board_path do

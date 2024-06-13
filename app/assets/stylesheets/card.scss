@@ -20,7 +20,7 @@ $avatar-size: 32px;
       margin-bottom: 10px;
     }
 
-    &_info {
+    &_task {
       display: flex;
       justify-content: space-between;
 
@@ -34,17 +34,11 @@ $avatar-size: 32px;
           width: $avatar-size;
           height: $avatar-size;
           border-radius: 100%;
-          margin-right: 8px;
-        }
-
-        &_created {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
+          margin-right: -10px;
         }
       }
 
-      &_task {
+      &_count {
         padding: 5px 5px;
         display: flex;
         align-items: flex-end;

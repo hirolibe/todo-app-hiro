@@ -15,19 +15,17 @@
       Deadline:
       = @task.deadline
     .task_info
-      -# = image_tag @task.user.avatar_image
-      = image_tag 'アイコン.jpg'
+      = image_tag @task.user.avatar_image
       %div
-        -# %p= @task.author_title
+        %p= @task.author_name
         %p hiro
-        -# %p= @task.display_created_at
-        %p 2024/6/10
+        %p= @task.display_created_at
 
   .task
     %h2 Comments
     - @comments.each do |comment|
       .task_info
-        = image_tag 'アイコン.jpg'
+        = image_tag comment.user.avatar_image
         %p= comment.content
     =link_to new_board_task_comment_path(@task.board, @task) do
       .new-board
