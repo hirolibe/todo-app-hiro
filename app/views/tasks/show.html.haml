@@ -1,7 +1,8 @@
 .container
   %h1.back-link= link_to @task.board.title, board_path(@task.board)
   .task
-    %h2= @task.title
+    .task_title
+      %h2= @task.title
     - if user_signed_in? && current_user.has_written_task?(@task)
       .task_actions
         .dropdown
