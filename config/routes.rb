@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   end
 
   resources :mytasks, only: [:index]
+  resource :profile, only: [:show, :edit, :update]
 
 end

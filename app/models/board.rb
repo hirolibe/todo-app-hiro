@@ -19,4 +19,18 @@ class Board < ApplicationRecord
 
   belongs_to :user
   has_many :tasks, dependent: :destroy
+
+  def task_authors
+    task_authors = Set.new
+    author_ids = Set.new
+
+    self.tasks.each do |task|
+      unless author_ids.include?(task.user.id)
+        task_authors.add(task.user)
+        author_ids.add(task.user.id)
+      end
+    end
+
+    task_authors
+  end
 end

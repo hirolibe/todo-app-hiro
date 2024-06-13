@@ -1,0 +1,45 @@
+.profile {
+  padding: 20px;
+
+  &_top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    &_display {
+      height: 200px;
+      width: 200px;
+      border-radius: 100%;
+      overflow: hidden;
+    }
+
+    &_input {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      border: 5px dotted #F4F4F4;
+      height: 200px;
+      width: 200px;
+      border-radius: 100%;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+  }
+
+  &_nickname {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+  }
+}
