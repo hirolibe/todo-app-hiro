@@ -17,6 +17,10 @@ $container-padding: 16px;
   padding: $container-padding $container-padding;
   position: relative;
 
+  &_title {
+    width: 280px;
+  }
+
   &_actions {
     position: absolute;
     top: 20px;
